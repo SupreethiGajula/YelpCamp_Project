@@ -1,0 +1,23 @@
+## Project Evolution
+
+### Step 1: All routes in app.js
+Initially, I defined all routes inside app.js. As the application grew,
+this made the file hard to read and maintain.
+
+### Step 2: Routes folder
+I separated routes into different files:
+- campgroundroutes.js
+- reviewroutes.js
+- authroutes.js
+
+This improved readability and modularity.
+
+### Step 3: Controllers
+To further improve separation of concerns, I moved route logic into
+controllers. Routes now only define endpoints, while controllers handle
+business logic.
+
+This makes the code:
+- Easier to test
+- Easier to debug
+- Easier to scale
