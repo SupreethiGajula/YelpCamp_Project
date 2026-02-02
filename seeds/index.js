@@ -23,7 +23,13 @@ const seedDB = async()=>{
             author: '6972f12bc43107395b266f35',//just for implementing authorisation
             title:`${sample(descriptors)} ${sample(places)}`,
             location:`${cities[random].city}, ${cities[random].state}`,
-            image:`https://picsum.photos/400?random=${Math.random()}`,
+            images:[
+                {
+                  url: 'https://res.cloudinary.com/drhk33p6k/image/upload/v1769998672/CampSites/ddaug8rnrpomwyhvuddj.jpg',
+                filename: 'CampSites/ddaug8rnrpomwyhvuddj',
+                _id: '69800951d43aeaacd822b47b'  
+                }
+            ],
             price:price,
             description:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum inventore omnis cum corporis, accusantium aliquid. Veniam voluptatibus ex aspernatur accusantium possimus exercitationem, impedit accusamus! Incidunt ea alias expedita velit enim.'
         });

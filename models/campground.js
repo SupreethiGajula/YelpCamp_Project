@@ -2,10 +2,20 @@ const mongoose = require('mongoose');
 const Review = require('./review')
 const Schema = mongoose.Schema;
 const User = require('./user');
+const maptilerClient = require("@maptiler/client");
+maptilerClient.config.apiKey = process.env.MAPTILER_API_KEY;
 
+
+const imageSchema = new Schema({
+            url: String,
+            filename: String
+})
+imageSchema.virtual('thumbnail').get(function(){
+    return this.url.replace('/upload','/upload/w_200')
+})
 const campGroundSchema = new Schema({
     title: String,
-    image:String,
+    images:[imageSchema],
     price:Number,
     description:String,
     location:String,
