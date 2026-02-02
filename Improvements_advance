@@ -1,0 +1,24 @@
+---->if you want to see the names of the files selected you can refactor your code to this in new.ejs/edit.ejs:
+                                <div class="mb-3">
+                                  <label class="form-label">Upload Images</label>
+                                  <input 
+                                      type="file" 
+                                      class="form-control" 
+                                      name="images" 
+                                      id="images"
+                                      multiple 
+                                      accept="image/*"
+                                  >
+                                  <div id="fileNames" class="mt-2"></div>
+                                </div>
+                                
+                                <script>
+                                  const input = document.getElementById('images');
+                                  const fileNamesDiv = document.getElementById('fileNames');
+                                
+                                  input.addEventListener('change', () => {
+                                      const files = Array.from(input.files);
+                                      fileNamesDiv.innerHTML = files.map(f => `<p>${f.name}</p>`).join('');
+                                  });
+                                </script>
+----->in the image upload section if you want to limit the size of an image/limit the number of images user can upload at once-->can be improved
