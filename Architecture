@@ -21,6 +21,20 @@ Ideally it is not good to store images in mongoDB.So if a user want to upload an
 Initially using Cloudinary for simplicity.
 **Later migrating to AWS S3 to understand cloud storage.**
 
+### Map Rendering on Campground Show Page
+
+The map on the campground show page is rendered using MapTiler SDK with a combination of EJS (server-side) and client-side JavaScript.
+
+The server renders the EJS template and injects required data (campground object and MapTiler API key) into a <script> tag.
+
+These values become global variables in the browser.
+
+An external JavaScript file (showPageMap.js) accesses these variables to initialize the map and marker.
+
+The map is attached to the <div id="map"></div> once the DOM is loaded.
+
+This separation allows secure server-side data handling while keeping map logic modular and browser-specific.
+
 
 
 
