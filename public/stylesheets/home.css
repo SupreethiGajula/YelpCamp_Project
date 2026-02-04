@@ -1,0 +1,72 @@
+.hero-bg {
+  background-image: url("https://images.unsplash.com/photo-1631635589499-afd87d52bf64?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8Y2FtcGluZ3xlbnwwfHwwfHx8MA%3D%3D");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  position: relative;
+  color: white;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0; /* shorthand for top/right/bottom/left */
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-content h1,
+.hero-content p {
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+}
+/* Dark transparent navbar */
+.navbar {
+  background-color: rgba(0, 0, 0, 0.55) !important;
+  backdrop-filter: blur(6px); /* optional, modern browsers */
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+/* Navbar text */
+.navbar .navbar-brand,
+.navbar .nav-link {
+  color: #ffffff !important;
+}
+
+/* Hover effect */
+.navbar .nav-link:hover {
+  color: #f8f9fa !important;
+  text-decoration: underline;
+}
+
+/* Logo alignment fix */
+.navbar-brand img {
+  filter: brightness(0) invert(1); /* makes dark logos white-ish */
+}
+
+.nav-link{
+    font-size: larger!important;
+}
+
+footer {
+  background-color: rgba(0, 0, 0, 0.75);
+  color: #ccc;
+}
+.feature-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: white;
+}
+
+.feature-icon {
+  width: 28px;
+  height: 28px;
+  filter: brightness(0) invert(1); /* makes icons white */
+}
+
